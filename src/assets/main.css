@@ -34,11 +34,17 @@
 .carousel{
     max-height: 300px;
 }
+.product_card{
+    border: none;
+}
+.main_product_seller{
+    color: rgb(253, 122, 144);
 
-/*DAKR MODE*/
+}   
+/*DARK MODE*/
 
 .dark_background{
-    background-color: black;
+    background-image: linear-gradient(rgb(58, 1, 58), rgb(3, 3, 45));
 }
 .dark_button{
     width: 5rem;
@@ -76,4 +82,8 @@
 .dark_screen_mode_icon{
     color: white;
     font-size: 23px;
+}
+.dark_main_product_seller{
+    color: white;
+    font-family: Optima;
 }

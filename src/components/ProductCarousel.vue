@@ -3,13 +3,13 @@
       <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner carousel h-100">
           <div class="carousel-item active" data-bs-interval="3000">
-            <img src="../assets/teste3.jpg" class="d-block w-100" alt="first">
+            <img src="../assets/teste3.jpg" class="d-block w-100 img-fluid" alt="first">
           </div>
           <div class="carousel-item" data-bs-interval="3000">
-            <img src="../assets/teste3.jpg" class="d-block w-100" alt="second">
+            <img src="../assets/teste3.jpg" class="d-block w-100 img-fluid" alt="second">
           </div>
           <div class="carousel-item" data-bs-interval="3000">
-            <img src="../assets/teste3.jpg" class="d-block w-100" alt="third">
+            <img src="../assets/teste3.jpg" class="d-block w-100 img-fluid" alt="third">
           </div>
         </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -29,5 +29,7 @@ export default {
 }
 </script>
 <style scoped>
-
+.carousel-item{
+  cursor: pointer;
+}
 </style>

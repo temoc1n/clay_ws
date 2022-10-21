@@ -32,10 +32,12 @@ export default {
     light_mode(){
       if (!this.light_mode) {
         localStorage.setItem('theme', 'dark');
+        this.$store.commit('changeMode', false)
         this.$emit('Mode', false)    
       }else{
         localStorage.setItem('theme', 'light');    
         this.$emit('Mode', true)
+        this.$store.commit('changeMode', true)
       }
     }
   },
