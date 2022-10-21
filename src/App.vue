@@ -1,30 +1,42 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="container-fluid p-0" :class="getMode() ? 'background' : 'dark_background'">
+    <div class="header-component">
+      <div class="header">
+        <LoggedOutHeader />
+      </div>
+      <div class="carrousel pt-5">
+        <ProductCarousel />
+      </div>
+    </div>
+  </div>
 </template>
 
+<script>
+import LoggedOutHeader from '@/components/LoggedOutHeader.vue'
+import ProductCarousel from '@/components/ProductCarousel.vue'
+export default {
+  name: 'App',
+  components:{
+    LoggedOutHeader,
+    ProductCarousel 
+  },
+  methods:{
+    getMode(){
+      if(localStorage.getItem('theme') == 'light'){
+        return true;
+      }else{
+        return false;
+      }
+    }
+  },
+  mounted(){
+   if(!localStorage.getItem('theme')){
+      localStorage.setItem('theme', 'light');
+    } 
+  }
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
+  @import url('./assets/main.css');
 </style>

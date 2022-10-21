@@ -1,0 +1,82 @@
+.background{
+    /*background-color: rgb(252, 159, 175);*/
+    background-color: white;
+}
+.button{
+    width: 5rem;
+    height: 2rem;
+    border: 0cm;
+    background-color: rgb(252, 149, 166);
+    color: white;
+}
+.button:hover{
+    background-color: rgb(253, 122, 144);
+    color: white;
+    cursor: pointer;
+}
+.button:focus{
+    color: white;
+}
+.header{
+    z-index: 999;
+    background-color: rgb(255, 204, 212);
+}
+.navbar_title{
+    font-weight: 700;
+}
+.screen_mode_icon{
+    font-size: 23px;
+}
+.header_name{
+    color: black;
+    font-family: Optima;
+}
+
+@media only screen and (min-width: 780px)  {
+    .navbar_title{
+        text-align: center;
+    }
+}
+
+/*DAKR MODE*/
+
+.dark_background{
+    background-color: black;
+}
+.dark_button{
+    width: 5rem;
+    height: 2rem;
+    border: none;
+    font-size: large;
+    font-family: 'NotoSansL';
+    background-color: transparent;
+    color: white;
+}
+.dark_button:hover{
+    background-color: rgba(128, 128, 128, 0.273);
+    color: white;
+    cursor: pointer;
+}
+.dark_button:focus{
+    background-color: rgba(128, 128, 128, 0.273);
+    color: white;
+}
+.dark_header{
+    z-index: 999;
+    background-image: linear-gradient(rgb(21, 1, 21), rgb(0, 0, 88));
+}
+.dark_navbar_title{
+    font-weight: 700;
+}
+.dark_screen_mode_icon{
+    font-size: 23px;
+    color: white;
+}
+.dark_header_name{
+    color: white;
+    font-family: Optima;
+}
+.dark_screen_mode_icon{
+    color: white;
+    font-size: 23px;
+}
