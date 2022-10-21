@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid pt-2 pe-0 ps-0">
       <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
+        <div class="carousel-inner carousel h-100">
           <div class="carousel-item active" data-bs-interval="3000">
             <img src="../assets/teste3.jpg" class="d-block w-100" alt="first">
           </div>
@@ -25,7 +25,7 @@
 </template>
 <script>
 export default {
-    name:'ProductCarousel'    
+    name:'ProductCarousel'
 }
 </script>
 <style scoped>

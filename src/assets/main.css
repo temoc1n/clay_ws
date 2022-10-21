@@ -31,6 +31,9 @@
     color: black;
     font-family: Optima;
 }
+.carousel{
+    max-height: 300px;
+}
 
 /*DAKR MODE*/
 
