@@ -1,5 +1,5 @@
 .background{
-    /*background-color: rgb(252, 159, 175);*/
+    background-color: rgb(252, 159, 175);
     background-color: white;
 }
 .button{
@@ -30,12 +30,6 @@
 .header_name{
     color: black;
     font-family: Optima;
-}
-
-@media only screen and (min-width: 780px)  {
-    .navbar_title{
-        text-align: center;
-    }
 }
 
 /*DAKR MODE*/

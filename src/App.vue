@@ -1,8 +1,8 @@
 <template>
-  <div class="container-fluid p-0" :class="getMode() ? 'background' : 'dark_background'">
+  <div class="container-fluid p-0" :class=" light_mode ? 'background' : 'dark_background'">
     <div class="header-component">
       <div class="header">
-        <LoggedOutHeader />
+        <LoggedOutHeader @Mode="light_mode = !light_mode"/>
       </div>
       <div class="carrousel pt-5">
         <ProductCarousel />
@@ -20,13 +20,9 @@ export default {
     LoggedOutHeader,
     ProductCarousel 
   },
-  methods:{
-    getMode(){
-      if(localStorage.getItem('theme') == 'light'){
-        return true;
-      }else{
-        return false;
-      }
+  data(){
+    return{
+      light_mode: true,
     }
   },
   mounted(){
