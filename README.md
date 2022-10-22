@@ -1,4 +1,4 @@
-# test
+# Miraki
 
 ## Project setup
 ```

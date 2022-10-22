@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid p-0" :class=" light_mode ? 'background' : 'dark_background'">
+    <div class="container-fluid p-0" :class=" this.$store.getters.getMode ? 'background' : 'dark_background'">
       <div class="dashboard">
         <div class="carrousel pt-5">
           <ProductCarousel />
@@ -25,12 +25,6 @@
         light_mode: true,
       }
     },
-    mounted(){
-    this.$router.push("/dashboard")
-     if(!localStorage.getItem('theme')){
-        localStorage.setItem('theme', 'light');
-      } 
-    }
   }
   </script>
   

@@ -12,8 +12,8 @@
             </div>
             <div class="log-div d-md-flex me-4 p-1 gap-4">
               <button class="nav-link active text-center rounded-3" :class="light_mode ? 'button' : 'dark_button'">Sign In</button>
-              <i v-if="light_mode" @click="light_mode = false" class="fa-regular fa-moon mt-1 "  :class="light_mode ? 'screen_mode_icon' : 'dark_screen_mode_icon'"></i>
-              <i v-else @click="light_mode = true" class="fa-solid fa-sun mt-1"  :class="light_mode ? 'screen_mode_icon' : 'dark_screen_mode_icon'"></i>
+              <i v-if="!light_mode" @click="light_mode = true" class="fa-regular fa-moon mt-1 "  :class="light_mode ? 'screen_mode_icon' : 'dark_screen_mode_icon'"></i>
+              <i v-else @click="light_mode = false" class="fa-solid fa-sun mt-1"  :class="light_mode ? 'screen_mode_icon' : 'dark_screen_mode_icon'"></i>
             </div>
           </div>
       </nav>

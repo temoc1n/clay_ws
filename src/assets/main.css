@@ -51,7 +51,7 @@
 /*DARK MODE*/
 
 .dark_background{
-    background-image: linear-gradient(rgb(58, 1, 58), rgb(3, 3, 45));
+    background-image: linear-gradient(rgb(21, 1, 21), rgb(0, 0, 88));
 }
 .dark_button{
     width: 5rem;
@@ -59,6 +59,7 @@
     border: none;
     background-color: transparent;
     color: white;
+    font-family: Optima;
 }
 .dark_button:hover{
     background-color: rgba(128, 128, 128, 0.273);
@@ -91,9 +92,15 @@
 }
 .dark_main_product_seller{
     color: white;
-    font-size: 40px;
+    font-size: 45px;
+    font-family: Optima;
+    font-weight: 500;
 }
 .dark_product_card{
-    box-shadow: 5px 10px 8px 10px rgba(0, 0, 0, 0.2), 20px 6px 20px 10px rgba(0, 0, 0, 0.19);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+.dark_product_card:hover{
+    box-shadow: 0px 0px 20px 10px rgb(69, 25, 182);
     border: none;
 }
