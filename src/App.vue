@@ -2,7 +2,7 @@
   <div class="container-fluid p-0" :class=" light_mode ? 'background' : 'dark_background'">
       <div class="header-component">
         <div class="header">
-          <LoggedInHeader @Mode="light_mode = !light_mode"/>
+          <MainHeader @Mode="light_mode = !light_mode"/>
         </div>
       </div>
       <router-view></router-view>
@@ -16,12 +16,12 @@
 
 <script>
 import MainFooter from '@/components/MainFooter.vue'
-import LoggedInHeader from '@/components/LoggedInHeader.vue';
+import MainHeader from '@/components/MainHeader.vue';
 export default {
   name: 'App',
   components:{
     MainFooter,
-    LoggedInHeader
+    MainHeader
   },
   data(){
     return{

@@ -1,16 +1,26 @@
 .background{
-    background-color: rgb(252, 159, 175);
     background-color: white;
 }
+.dark_background{
+    background-image: linear-gradient(rgb(21, 1, 21), rgb(0, 0, 88));
+}
+
 .navbar-toggler{
     border: none;
     color: transparent;
 }
+
 .mobile_menu_icon{
     color:black !important;
     font-size: larger;
     cursor: pointer;
+    transition: color 0.3s;
 }
+.dark_mobile_menu_icon{
+    color:white !important;
+    font-size: larger;
+}
+
 .button{
     width: 5rem;
     height: 2rem;
@@ -26,60 +36,7 @@
 .button:focus{
     color: white;
 }
-.header{
-    z-index: 999;
-    background-color: rgb(255, 204, 212);
-}
-.navbar_title{
-    font-weight: 700;
-}
-.header_mode_icon{
-    font-size: 20px;
-    cursor: pointer;
-}
-.header_name{
-    color: black;
-    font-family: Optima;
-    cursor: pointer;
-}
-.carousel{
-    max-height: 300px;
-}
-.product_card{
-    box-shadow: 0px 0px 10px 0px rgb(255, 207, 215);
-    border: none;
-    transition: box-shadow 0.3s;
-}
-.product_card:hover{
-    box-shadow: 0px 0px 20px 10px rgb(255, 207, 215);
-    border: none;
-}
-.main_product_seller{
-    color: rgb(253, 122, 144);
-    font-size: 40px;
-}
-.footer{
-    background-color: white;
-}
-.footer_element{
-    color: rgb(255, 204, 212) !important;
-}
-.footer_element:hover{
-    color: rgb(252, 149, 166) !important;
-    cursor: pointer;
-}
-.footer_element_date{
-    color: rgb(255, 204, 212) !important;
-}
-.navbar_line{
-    border-bottom: 0.3px rgb(252, 149, 166) solid;
-}
 
-/*DARK MODE*/
-
-.dark_background{
-    background-image: linear-gradient(rgb(21, 1, 21), rgb(0, 0, 88));
-}
 .dark_button{
     width: 5rem;
     height: 2rem;
@@ -97,28 +54,58 @@
     background-color: rgba(128, 128, 128, 0.273);
     color: white;
 }
+
+.header{
+    z-index: 999;
+    background-color: rgb(255, 204, 212);
+}
 .dark_header{
     z-index: 999;
     background-image: linear-gradient(rgb(21, 1, 21), rgb(0, 0, 88));
 }
+
+.navbar_title{
+    font-weight: 700;
+}
 .dark_navbar_title{
     font-weight: 700;
+}
+
+.header_mode_icon{
+    font-size: 20px;
+    cursor: pointer;
 }
 .dark_header_mode_icon{
     font-size: 20px;
     color: white;
     cursor: pointer;
 }
+
+.header_name{
+    color: black;
+    font-family: Optima;
+    cursor: pointer;
+    transition: color 0.8s;
+}
 .dark_header_name{
     color: white;
     font-family: Optima;
     cursor: pointer;
+    transition: color 0.8s;
 }
-.dark_main_product_seller{
-    color: white;
-    font-size: 45px;
-    font-family: Optima;
-    font-weight: 500;
+
+.carousel{
+    max-height: 300px;
+}
+
+.product_card{
+    box-shadow: 0px 0px 10px 0px rgb(255, 207, 215);
+    border: none;
+    transition: box-shadow 0.3s;
+}
+.product_card:hover{
+    box-shadow: 0px 0px 20px 10px rgb(255, 207, 215);
+    border: none;
 }
 .dark_product_card{
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
@@ -129,12 +116,33 @@
     box-shadow: 0px 0px 20px 10px rgb(69, 25, 182);
     border: none;
 }
-.dark_mobile_menu_icon{
-    color:white !important;
-    font-size: larger;
+
+.main_product_seller{
+    color: rgb(253, 122, 144);
+    font-size: 40px;
+    transition: color 0.8s, font-size 0.8s;
+}
+.dark_main_product_seller{
+    color: white;
+    font-size: 45px;
+    font-family: Optima;
+    font-weight: 500;
+    transition: font-size 0.8s, font-weight 0.8s;
+}
+
+.footer{
+    background-color: white;
 }
 .dark_footer{
-    background-image: linear-gradient(rgb(0, 0, 88), rgb(21, 1, 21))
+    background-image: linear-gradient(rgb(0, 0, 88), rgb(21, 1, 21));
+}
+
+.footer_element{
+    color: rgb(252, 149, 166) !important;
+}
+.footer_element:hover{
+    color: rgb(255, 204, 212) !important;
+    cursor: pointer;
 }
 .dark_footer_element{
     color: white !important;
@@ -143,8 +151,16 @@
     color: rgba(255, 255, 255, 0.379) !important;
     cursor: pointer;
 }
+
+.footer_element_date{
+    color: rgb(252, 149, 166) !important;
+}
 .dark_footer_element_date{
     color: white !important;
+}
+
+.navbar_line{
+    border-bottom: 0.3px rgb(252, 149, 166) solid;
 }
 .dark_navbar_line{
     border-bottom: 0.3px rgba(255, 255, 255, 0.379) solid;
