@@ -6,21 +6,21 @@
         </div>
       </div>
       <router-view></router-view>
-      <div class="footer-component">
-        
-      </div>
+        <MainFooter />
   </div>
 </template>
 
 <script>
+import MainFooter from '@/components/MainFooter.vue'
 import LoggedOutHeader from '@/components/LoggedOutHeader.vue'
 export default {
   name: 'App',
   components:{
-    LoggedOutHeader
+    LoggedOutHeader,
+    MainFooter
   },
   mounted(){
-    this.$router.push("/dashboard")
+    this.$router.push("/home")
     if(!localStorage.getItem('theme')){
       localStorage.setItem('theme', 'light');
     } 
