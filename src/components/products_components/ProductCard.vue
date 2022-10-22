@@ -1,7 +1,7 @@
 <template>
     <div class="container">
-        <div class="card product_card w-100" style="width: 19rem;">
-            <img src="../../assets/product.jpg" class="card-img-top" alt="...">
+        <div class="card w-100"  :class=" this.$store.getters.getMode ? 'product_card' : 'dark_product_card'" style="width: 19rem;">
+            <img src="../../assets/product.webp" class="card-img-top border-none" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Cool Shoes</h5>
                 <p class="card-text">They blue and cool</p>
@@ -17,7 +17,7 @@
 </template>
 <script>
 export default {
-    
+    name:'ProductCard'
 }
 </script>
 <style scoped>
