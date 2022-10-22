@@ -6,11 +6,11 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <div class=" me-auto mb-2 mb-lg-0 d-flex gap-2">
+            <div class="me-auto mb-2 mb-lg-0 d-md-flex gap-2">
                 <button class="nav-link active text-center rounded-3" :class="light_mode ? 'button' : 'dark_button'" aria-current="page">Shop</button>
                 <button class="nav-link active text-center rounded-3" :class="light_mode ? 'button' : 'dark_button'" aria-current="page">News</button>
             </div>
-            <div class="log-div d-flex me-4 p-1 gap-4">
+            <div class="log-div d-md-flex me-4 p-1 gap-4">
               <button class="nav-link active text-center rounded-3" :class="light_mode ? 'button' : 'dark_button'">Sign In</button>
               <i v-if="light_mode" @click="light_mode = false" class="fa-regular fa-moon mt-1 "  :class="light_mode ? 'screen_mode_icon' : 'dark_screen_mode_icon'"></i>
               <i v-else @click="light_mode = true" class="fa-solid fa-sun mt-1"  :class="light_mode ? 'screen_mode_icon' : 'dark_screen_mode_icon'"></i>

@@ -35,10 +35,11 @@
     max-height: 300px;
 }
 .product_card{
-    border: none;
+    border: 1px rgba(128, 128, 128, 0.273) solid;
 }
 .main_product_seller{
     color: rgb(253, 122, 144);
+    font-size: 40px;
 
 }   
 /*DARK MODE*/

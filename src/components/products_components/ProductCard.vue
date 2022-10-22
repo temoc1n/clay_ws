@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div class="card product_card" style="width: 18rem;">
+        <div class="card product_card w-100" style="width: 19rem;">
             <img src="../../assets/product.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Cool Shoes</h5>

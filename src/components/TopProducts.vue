@@ -3,8 +3,8 @@
         <div class="best_seller_title text-center pt-4 pb-2">
             <h2 :class="this.$store.getters.getMode ? 'main_product_seller' : 'dark_main_product_seller'">Best Sellers</h2>
         </div>
-        <div class="products_placement d-md-flex col-sm-12 pt-3 pe-0">
-            <ProductCard class="pb-3"/>
+        <div class="products_placement d-md-flex pt-3 pe-0 justify-content-center">
+            <ProductCard class="pb-3 ms-md-4"/>
             <ProductCard class="pb-3"/>
             <ProductCard class="pb-3"/>
         </div>

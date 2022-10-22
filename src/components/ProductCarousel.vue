@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid pt-2 pe-0 ps-0">
+  <div class="container-flex justify-content-center align-center pt-2 pe-0 ps-0">
       <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner carousel h-100">
           <div class="carousel-item active" data-bs-interval="3000">
