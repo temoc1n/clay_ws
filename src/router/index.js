@@ -20,6 +20,11 @@ const routes = [
     path: '/contact',
     name: 'contact',
     component: () => import('../views/StoreView.vue')
+  },
+  {
+    path: '/donate',
+    name: 'donate',
+    component: () => import('../views/StoreView.vue')
   }
 ]
 
