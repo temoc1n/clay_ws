@@ -2,7 +2,7 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    mode: true
+    mode: false
   },
   getters: {
     getMode(state){

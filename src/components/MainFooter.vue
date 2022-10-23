@@ -8,7 +8,7 @@
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted" :class=" this.$store.getters.getMode ? 'footer_element' : 'dark_footer_element'" @click.prevent="$router.push('/contact')">Contact Us</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted" :class=" this.$store.getters.getMode ? 'footer_element' : 'dark_footer_element'" @click.prevent="$router.push('/donate')">Donate</a></li>
                 </ul>
-                <p class="text-center text-muted" :class=" this.$store.getters.getMode ? 'footer_element_date' : 'dark_footer_element_date'">© {{date.getFullYear()}} Miraki, Inc</p>
+                <p class="text-center text-muted" :class=" this.$store.getters.getMode ? 'footer_element_date' : 'dark_footer_element_date'">© {{date.getFullYear()}} IKIGAI, Inc</p>
             </footer>
         </div>
 </template>

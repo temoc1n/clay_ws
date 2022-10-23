@@ -1,11 +1,11 @@
 <template>
     <div class="container-fluid position-fixed w-100"  :class="this.$store.getters.getMode ? 'header' : 'dark_header'">
       <nav class="navbar navbar-expand-lg">
-          <h2 class="me-3 mt-1" :class="this.$store.getters.getMode ? 'header_name' : 'dark_header_name'" @click.prevent="$router.push('/home')">IKIGAI <i class="fa-solid fa-star-and-crescent"></i></h2>
+          <h2 class="me-3 mt-1" :class="this.$store.getters.getMode ? 'header_name' : 'dark_header_name'" @click.prevent="$router.push('/home')">IKIGAI</h2>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="fa-solid fa-bars" :class="this.$store.getters.getMode ? 'mobile_menu_icon' : 'dark_mobile_menu_icon'"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03" style="margin-bottom: 3px;">
             <div class="me-auto mb-2 mb-lg-0 d-flex gap-2">
                 <button class="nav-link active text-center rounded-3" :class="this.$store.getters.getMode ? 'button' : 'dark_button'" aria-current="page" @click.prevent="$router.push('/shop')">Shop</button>
                 <button class="nav-link active text-center rounded-3" :class="this.$store.getters.getMode ? 'button' : 'dark_button'" aria-current="page" @click.prevent="$router.push('/about')">About</button>

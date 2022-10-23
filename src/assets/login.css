@@ -4,18 +4,28 @@
 
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
-
+body{
+    background-color: rgb(171, 77, 222);
+}
 .login_body{
 	font-family: 'Poppins', sans-serif;
 	font-weight: 300;
 	font-size: 15px;
 	line-height: 1.7;
 	color: #c4c3ca !important;
-	background-image: linear-gradient(rgb(43, 0, 43), rgb(112, 0, 97));
+	/*background-image: linear-gradient(rgb(43, 0, 43), rgb(112, 0, 97));*/
+    background-image: url(../assets/login.png);
 	overflow-x: hidden;
 }
+.login_title{
+    color: white;
+    font-family: Optima;
+    cursor: pointer;
+    transition: color 0.8s;
+    font-size:50px;
+}
 a {
-	cursor: pointer;
+  cursor: pointer;
   transition: all 200ms linear;
 }
 a:hover {
@@ -237,24 +247,18 @@ h6 span{
     width: 5rem;
     height: 2.3rem;
     border: 0cm;
-    background-color: rgb(253, 122, 144);
+    background-color: rgb(171, 77, 222);
     color: white;
 }
-.btn:active,
 .btn:focus{  
-    background-color: #102770;
-    color: #ffeba7;
-    box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
+    background-color: rgb(253, 122, 144) !important;
+    color: white !important;
 }
 .btn:hover{  
-    background-color: rgb(252, 149, 166);
+    background-color: rgb(121, 53, 157);
     color: white;
     cursor: pointer;
 }
-
-
-
-
 .logo {
 	position: absolute;
 	top: 30px;

@@ -4,6 +4,7 @@
       <div class="container">
         <div class="row full-height justify-content-center">
           <div class="col-12 text-center align-self-center py-5">
+            <h2 class="me-3 mt-1 mb-3 login_title" :class="this.$store.getters.getMode ? 'header_name' : 'dark_header_name'" @click.prevent="$router.push('/home')">IKIGAI<br><p>Online Sculpting Store</p></h2>
             <div class="section pb-5 pt-5 pt-sm-2 text-center">
               <h6 class="mb-0 pb-3">
                 <span>Log In </span><span>Sign Up</span>
