@@ -102,9 +102,10 @@
   </div>
 </template>
 <script>
-import('../assets/login.css')
 export default {
-  name: "LoginView",
+    name: "LoginView",
 };
 </script>
-<style scoped></style>
+<style scoped>
+@import url('../assets/login.css');
+</style>
