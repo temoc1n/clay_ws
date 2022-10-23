@@ -9,8 +9,8 @@
             <div class="me-auto mb-2 mb-lg-0 d-flex gap-2">
                 <button class="nav-link active text-center rounded-3" :class="light_mode ? 'button' : 'dark_button'" aria-current="page" @click.prevent="$router.push('/shop')">Shop</button>
                 <button class="nav-link active text-center rounded-3" :class="light_mode ? 'button' : 'dark_button'" aria-current="page" @click.prevent="$router.push('/about')">About</button>
+                <button class="nav-link active text-center rounded-3" :class="light_mode ? 'button' : 'dark_button'" aria-current="page" @click.prevent="$router.push('/donate')">Donate</button>
                 <button class="nav-link active text-center rounded-3 w-50" :class="light_mode ? 'button' : 'dark_button'" aria-current="page" style="white-space: nowrap" @click.prevent="$router.push('/contact')">Get in Touch!</button>
-                <button class="nav-link active text-center rounded-3" :class="light_mode ? 'button' : 'dark_button'" aria-current="page" @click.prevent="$router.push('/donate')">Donate!</button>
             </div>
             <div class="log-div d-flex me-4 p-1 gap-4">
                 <i v-if="logged" class="fa-regular fa-user mt-1" :class="light_mode ? 'header_mode_icon' : 'dark_header_mode_icon'"></i>
