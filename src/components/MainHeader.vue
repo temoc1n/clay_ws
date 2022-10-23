@@ -15,7 +15,7 @@
             <div class="log-div d-flex me-4 p-1 gap-4">
                 <i v-if="logged" class="fa-regular fa-user mt-1" :class="light_mode ? 'header_mode_icon' : 'dark_header_mode_icon'"></i>
                 <i v-if="logged" class="fa-solid fa-bag-shopping mt-1" :class="light_mode ? 'header_mode_icon' : 'dark_header_mode_icon'"></i>
-                <button v-if="!logged" class="nav-link active text-center rounded-3" :class="light_mode ? 'button' : 'dark_button'" @click="logged = true">Login</button>
+                <button v-if="!logged" class="nav-link active text-center rounded-3" :class="light_mode ? 'button' : 'dark_button'" @click="logged = true" @click.prevent="$router.push('/login')">Login</button>
                 <i v-if="!light_mode" @click="light_mode = true" class="fa-regular fa-moon mt-1 "  :class="light_mode ? 'header_mode_icon' : 'dark_header_mode_icon'"></i>
                 <i v-else @click="light_mode = false" class="fa-solid fa-sun sun_header mt-1"  :class="light_mode ? 'header_mode_icon' : 'dark_header_mode_icon'"></i>
                 <i v-if="logged" class="fa-solid fa-arrow-right-from-bracket mt-1" :class="light_mode ? 'header_mode_icon' : 'dark_header_mode_icon'" @click="logged = false"></i>

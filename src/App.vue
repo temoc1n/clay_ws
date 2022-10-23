@@ -2,13 +2,13 @@
   <div class="container-fluid p-0" :class=" light_mode ? 'background' : 'dark_background'">
       <div class="header-component">
         <div class="header">
-          <MainHeader @Mode="light_mode = !light_mode"/>
+          <MainHeader @Mode="light_mode = !light_mode" v-if="$route.name != 'login'"/>
         </div>
       </div>
       <router-view></router-view>
       <div class="footer-component">
         <div class="footer">
-          <MainFooter />
+          <MainFooter v-if="$route.name != 'login'"/>
         </div>
       </div>
   </div>
