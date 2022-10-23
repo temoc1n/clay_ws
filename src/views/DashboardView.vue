@@ -19,11 +19,6 @@
     components:{
       ProductCarousel,
       TopProducts
-  },
-    data(){
-      return{
-        light_mode: true,
-      }
     },
   }
   </script>

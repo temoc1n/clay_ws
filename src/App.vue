@@ -1,8 +1,8 @@
 <template>
-  <div class="container-fluid p-0" :class=" light_mode ? 'background' : 'dark_background'">
+  <div class="container-fluid p-0" :class=" this.$store.getters.getMode ? 'background' : 'dark_background'">
       <div class="header-component">
         <div class="header">
-          <MainHeader @Mode="light_mode = !light_mode" v-if="$route.name != 'login'"/>
+          <MainHeader v-if="$route.name != 'login'"/>
         </div>
       </div>
       <router-view></router-view>
@@ -22,11 +22,6 @@ export default {
   components:{
     MainFooter,
     MainHeader
-  },
-  data(){
-    return{
-      logged: true
-    }
   },
   mounted(){
     this.$router.push("/home")
