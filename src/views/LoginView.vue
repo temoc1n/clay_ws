@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid login_body">
     <div class="section">
       <div class="container">
         <div class="row full-height justify-content-center">
@@ -26,7 +26,7 @@
                             type="email"
                             name="logemail"
                             class="form-style"
-                            placeholder="Your Email"
+                            placeholder="Email"
                             id="logemail"
                             autocomplete="off"
                           />
@@ -37,7 +37,7 @@
                             type="password"
                             name="logpass"
                             class="form-style"
-                            placeholder="Your Password"
+                            placeholder="Password"
                             id="logpass"
                             autocomplete="off"
                           />
@@ -59,7 +59,7 @@
                             type="text"
                             name="logname"
                             class="form-style"
-                            placeholder="Your Full Name"
+                            placeholder="Username"
                             id="logname"
                             autocomplete="off"
                           />
@@ -70,7 +70,7 @@
                             type="email"
                             name="logemail"
                             class="form-style"
-                            placeholder="Your Email"
+                            placeholder="Email"
                             id="logemail"
                             autocomplete="off"
                           />
@@ -81,7 +81,7 @@
                             type="password"
                             name="logpass"
                             class="form-style"
-                            placeholder="Your Password"
+                            placeholder="Password"
                             id="logpass"
                             autocomplete="off"
                           />
