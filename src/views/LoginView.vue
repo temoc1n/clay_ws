@@ -21,7 +21,8 @@
                   <div class="card-front">
                     <div class="center-wrap">
                       <div class="section text-center">
-                        <h4 class="mb-4 pb-3">Log In</h4>
+                        <h4 class="mb-3 pb-3">Log In</h4>
+                        <p v-if="warning">Wrong credentials, <br>please try again ♥</p>
                         <div class="form-group">
                           <input
                             type="email"
@@ -30,6 +31,7 @@
                             placeholder="Email"
                             id="logemail"
                             autocomplete="off"
+                            v-model="email"
                           />
                           <i class="input-icon uil uil-at"></i>
                         </div>
@@ -41,10 +43,11 @@
                             placeholder="Password"
                             id="logpass"
                             autocomplete="off"
+                            v-model="password"
                           />
                           <i class="input-icon uil uil-lock-alt"></i>
                         </div>
-                        <a href="#" class="btn mt-4">submit</a>
+                        <a href="#" class="btn mt-4" @click="Login">submit</a>
                         <p class="mb-0 mt-4 text-center">
                           <a href="#0" class="link">Forgot your password?</a>
                         </p>
@@ -60,9 +63,10 @@
                             type="text"
                             name="logname"
                             class="form-style"
-                            placeholder="Username"
+                            placeholder="Full Name"
                             id="logname"
                             autocomplete="off"
+                            v-model="username"
                           />
                           <i class="input-icon uil uil-user"></i>
                         </div>
@@ -74,6 +78,7 @@
                             placeholder="Email"
                             id="logemail"
                             autocomplete="off"
+                            v-model="email"
                           />
                           <i class="input-icon uil uil-at"></i>
                         </div>
@@ -85,10 +90,23 @@
                             placeholder="Password"
                             id="logpass"
                             autocomplete="off"
+                            v-model="password"
                           />
                           <i class="input-icon uil uil-lock-alt"></i>
                         </div>
-                        <a href="#" class="btn mt-4">submit</a>
+                        <div class="form-group mt-2">
+                          <input
+                            type="password"
+                            name="logpass"
+                            class="form-style"
+                            placeholder="Repet Password"
+                            id="logpass"
+                            autocomplete="off"
+                            v-model="rep_password"
+                          />
+                          <i class="input-icon uil uil-lock-alt"></i>
+                        </div>
+                        <a href="#" class="btn mt-4" @click="Register">submit</a>
                       </div>
                     </div>
                   </div>
@@ -102,8 +120,49 @@
   </div>
 </template>
 <script>
+import axios from 'axios';
 export default {
     name: "LoginView",
+    data(){
+        return{
+            username: undefined,
+            email: undefined,
+            password: undefined,
+            rep_password: undefined,
+            warning: false
+        }
+    },
+    methods:{
+        Login(){
+            axios.post('http://127.0.0.1:4444/api/login',
+            {
+                'email':this.email,
+                'password':this.password
+            }).then((response) =>{
+                if(response.data.data.token){
+                    localStorage.setItem('authToken',response.data.data.token);
+                    this.$store.commit('Logged', true)
+                    this.$router.push('/home');
+                }
+            }).catch((error)=>{
+                console.log(error)
+                this.warning = true
+            })
+        },
+        Register(){
+            axios.post('http://127.0.0.1:4444/api/register',{
+                'name': this.username,
+                'email': this.email,
+                'password': this.password,
+                'password_confirmation': this.rep_password
+            }).then((response) => {
+                console.log(response)
+            }).catch((error)=>{
+                console.log(error);
+                this.warning = true;
+            })
+        }
+    }
 };
 </script>
 <style scoped>

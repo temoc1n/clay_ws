@@ -13,12 +13,12 @@
                 <button class="nav-link active text-center rounded-3 w-50" :class="this.$store.getters.getMode ? 'button' : 'dark_button'" aria-current="page" style="white-space: nowrap" @click.prevent="$router.push('/contact')">Get in Touch!</button>
             </div>
             <div class="log-div d-flex me-4 p-1 gap-4">
-                <i v-if="logged" class="fa-regular fa-user mt-1" :class="this.$store.getters.getMode ? 'header_mode_icon' : 'dark_header_mode_icon'"></i>
-                <i v-if="logged" class="fa-solid fa-bag-shopping mt-1" :class="this.$store.getters.getMode ? 'header_mode_icon' : 'dark_header_mode_icon'"></i>
-                <button v-if="!logged" class="nav-link active text-center rounded-3" :class="this.$store.getters.getMode ? 'button' : 'dark_button'" @click="logged = true" @click.prevent="$router.push('/login')">Login</button>
+                <i v-if="this.$store.getters.getLogged" class="fa-regular fa-user mt-1" :class="this.$store.getters.getMode ? 'header_mode_icon' : 'dark_header_mode_icon'"></i>
+                <i v-if="this.$store.getters.getLogged" class="fa-solid fa-bag-shopping mt-1" :class="this.$store.getters.getMode ? 'header_mode_icon' : 'dark_header_mode_icon'"></i>
+                <button v-if="!this.$store.getters.getLogged" class="nav-link active text-center rounded-3" :class="this.$store.getters.getMode ? 'button' : 'dark_button'" @click.prevent="$router.push('/login')">Login</button>
                 <i v-if="!this.$store.getters.getMode" @click="light_mode = true" class="fa-regular fa-moon mt-1 "  :class="this.$store.getters.getMode ? 'header_mode_icon' : 'dark_header_mode_icon'"></i>
                 <i v-else @click="light_mode = false" class="fa-solid fa-sun sun_header mt-1"  :class="this.$store.getters.getMode ? 'header_mode_icon' : 'dark_header_mode_icon'"></i>
-                <i v-if="logged" class="fa-solid fa-arrow-right-from-bracket mt-1" :class="this.$store.getters.getMode ? 'header_mode_icon' : 'dark_header_mode_icon'" @click="logged = false"></i>
+                <i v-if="this.$store.getters.getLogged" class="fa-solid fa-arrow-right-from-bracket mt-1" :class="this.$store.getters.getMode ? 'header_mode_icon' : 'dark_header_mode_icon'" @click="Logout"></i>
             </div>
           </div>
       </nav>
@@ -26,12 +26,26 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   name: 'LoggedInHeader',
   data() {
     return {
       light_mode: undefined,
-      logged: false
+    }
+  },
+  methods:{
+    Logout(){
+      axios.post('http://127.0.0.1:4444/api/logout',{},{
+        headers:{
+          'Authorization':'Bearer ' + localStorage.getItem('authToken')
+        }
+      })
+      .then((respose)=>{
+        console.log(respose);
+        localStorage.removeItem('authToken');
+        this.$store.commit('Logged', false);
+      })
     }
   },
   watch:{

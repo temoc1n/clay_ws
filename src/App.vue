@@ -28,6 +28,9 @@ export default {
     if(!localStorage.getItem('theme')){
       localStorage.setItem('theme', 'dark');
     } 
+    if(localStorage.getItem('authToken')){
+      this.$store.commit('Logged', true)
+    }
   }
 }
 </script>
