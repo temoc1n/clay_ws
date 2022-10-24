@@ -272,3 +272,31 @@ h6 span{
 	width: auto;
 	display: block;
 }
+.warning_base, .succes_base{
+  position: absolute; 
+  left: 50%;
+  z-index:999;
+}
+.warning_error, .warning_succes{
+  position: relative; 
+  left: -50%;
+}
+.alert-warning{
+  background-color: rgba(217, 17, 17, 0.681);
+  color:white;
+  border: none;
+  animation: fadeIn 0.3s;
+}
+.alert-succes{
+  background-color: rgba(22, 184, 44, 0.681);
+  color:white;
+  border: none;
+  animation: fadeIn 0.3s;
+}
+@keyframes fadeIn {
+  0% {opacity: 0%;}
+  25% {opacity: 25%;}
+  50% {opacity: 50%;}
+  75% {opacity: 75%;}
+  100% {opacity: 100%;}
+}
